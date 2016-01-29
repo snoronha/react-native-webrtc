@@ -17,6 +17,6 @@
     "webrtc"
   ],
   "peerDependencies": {
-    "react-native": ">=0.10.0"
+    "react-native": "^0.18.1"
   }
 }
