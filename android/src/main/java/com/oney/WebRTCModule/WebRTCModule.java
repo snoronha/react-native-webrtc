@@ -219,9 +219,29 @@ public class WebRTCModule extends ReactContextBaseJavaModule {
         callback.invoke(mMediaStreamId);
     }
     private VideoCapturer getVideoCapturer() {
-        return VideoCapturerAndroid.create(CameraEnumerationAndroid.getNameOfFrontFacingDevice(), new VideoCapturerAndroid.CameraErrorHandler() {
+        return VideoCapturerAndroid.create(CameraEnumerationAndroid.getNameOfFrontFacingDevice(), new VideoCapturerAndroid.CameraEventsHandler() {
             @Override
             public void onCameraError(String s) {
+
+            }
+
+            @Override
+            public void onCameraFreezed(String s) {
+
+            }
+
+            @Override
+            public void onCameraOpening(int i) {
+
+            }
+
+            @Override
+            public void onFirstFrameAvailable() {
+
+            }
+
+            @Override
+            public void onCameraClosed() {
 
             }
         });
